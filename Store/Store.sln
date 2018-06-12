@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.App", "Store.App\Stor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QuickStart", "QuickStart", "{A64C1570-084E-4506-9929-A9AF1B043F47}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TrackChanges", "TrackChanges", "{CBC218D7-6A7F-4AF1-ABE4-0E4A1DDFA800}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.App.TCh", "Store.App.TCh\Store.App.TCh.csproj", "{7C8E7E05-42E2-481A-B989-42BDF5FE15D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,13 +27,17 @@ Global
 		{0458789A-7B1E-45ED-A246-33EF4470D446}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0458789A-7B1E-45ED-A246-33EF4470D446}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0458789A-7B1E-45ED-A246-33EF4470D446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C8E7E05-42E2-481A-B989-42BDF5FE15D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C8E7E05-42E2-481A-B989-42BDF5FE15D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C8E7E05-42E2-481A-B989-42BDF5FE15D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C8E7E05-42E2-481A-B989-42BDF5FE15D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{4913F518-3546-4D90-BCD0-C7EDB70BCE3D} = {A64C1570-084E-4506-9929-A9AF1B043F47}
 		{0458789A-7B1E-45ED-A246-33EF4470D446} = {A64C1570-084E-4506-9929-A9AF1B043F47}
+		{7C8E7E05-42E2-481A-B989-42BDF5FE15D9} = {CBC218D7-6A7F-4AF1-ABE4-0E4A1DDFA800}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C53B6FD-B46D-408C-8730-30BB593890EC}

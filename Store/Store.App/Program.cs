@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using Store.QuickStart;
 
 namespace Store.App
 {
@@ -7,17 +7,27 @@ namespace Store.App
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Store.App");
-
       using (var db = new StoreDbContext())
       {
         var orders = db.Orders;
 
+        Console.WriteLine("Orders");
+
         foreach (var order in orders)
         {
-          Console.WriteLine("submit date: " + order.SubmitDate);
+          Console.WriteLine(@"Id: {0}, submit date: {1}", order.Id, order.SubmitDate);
         }
+        
+        var entity = new Order()
+        {
+          SubmitDate = DateTime.Now
+        };
+
+        db.Orders.Add(entity);
+        
+        db.SaveChanges();
       }
+
       Console.ReadLine();
     }
   }

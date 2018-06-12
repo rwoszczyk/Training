@@ -1,9 +1,8 @@
 ﻿using System.Data.Entity;
-using System.Linq;
 
-namespace Store
+namespace Store.QuickStart
 {
-  public partial class StoreDbContext : DbContext
+  public class StoreDbContext : DbContext
   {
     public StoreDbContext() : base("Store")
     {
