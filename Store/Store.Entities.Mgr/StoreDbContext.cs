@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using Store.Entities.Mgr.Migrations;
 
 namespace Store.Entities.Mgr
 {
@@ -6,6 +7,11 @@ namespace Store.Entities.Mgr
   {
     public StoreDbContext() : base("Store")
     {
+    }
+
+    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    {
+      Database.SetInitializer(new MigrateDatabaseToLatestVersion<StoreDbContext, Configuration>());
     }
 
     public DbSet<Customer> Customers { get; set; }
