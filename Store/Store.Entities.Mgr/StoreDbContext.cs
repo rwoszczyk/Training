@@ -9,10 +9,10 @@ namespace Store.Entities.Mgr
     {
     }
 
-    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    /*protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
       Database.SetInitializer(new MigrateDatabaseToLatestVersion<StoreDbContext, Configuration>());
-    }
+    }*/
 
     public DbSet<Customer> Customers { get; set; }
 

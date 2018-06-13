@@ -1,0 +1,1 @@
+Add-Migration -ProjectName Store.Entities.Mgr  -StartUpProjectName Store.App.Mgr -Verbose 

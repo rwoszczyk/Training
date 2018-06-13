@@ -9,7 +9,7 @@ namespace Store.Entities.Mgr.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(Store.Entities.Mgr.StoreDbContext context)
