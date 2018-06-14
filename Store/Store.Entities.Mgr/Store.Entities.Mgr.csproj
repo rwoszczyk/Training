@@ -48,14 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
-    <Compile Include="Mapping\OrderConfiguration.cs" />
-    <Compile Include="Migrations\201806131317545_Initial.cs" />
-    <Compile Include="Migrations\201806131317545_Initial.Designer.cs">
-      <DependentUpon>201806131317545_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806131320504_OrderDetails.cs" />
-    <Compile Include="Migrations\201806131320504_OrderDetails.Designer.cs">
-      <DependentUpon>201806131320504_OrderDetails.cs</DependentUpon>
+    <Compile Include="Migrations\201806142127459_Init.cs" />
+    <Compile Include="Migrations\201806142127459_Init.Designer.cs">
+      <DependentUpon>201806142127459_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
@@ -63,15 +58,11 @@
     <Compile Include="StoreDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806131317545_Initial.resx">
-      <DependentUpon>201806131317545_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806131320504_OrderDetails.resx">
-      <DependentUpon>201806131320504_OrderDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806142127459_Init.resx">
+      <DependentUpon>201806142127459_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

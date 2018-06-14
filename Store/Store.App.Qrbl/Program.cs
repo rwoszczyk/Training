@@ -11,23 +11,24 @@ namespace Store.App.Qrbl
     {
       using (var db = new StoreDbContext())
       {
-        Console.WriteLine("Orders");
-        
         var dateTimeToday = DateTime.Today;
 
         var ordersOfToday = db
           .Orders
           .ToList()
-          .Where(x => x.SubmitDate == dateTimeToday);
+          .Where(x => x.SubmitDate >= dateTimeToday);
 
+        Console.WriteLine("Orders - query 1");
         PrintOrders(ordersOfToday);
 
 
         var ordersOfToday_2 = db
           .Orders
-          .Where(x => x.SubmitDate == dateTimeToday)
+          .Where(x => x.SubmitDate >= dateTimeToday)
           .ToList();
 
+        Console.WriteLine();
+        Console.WriteLine("Orders - query 2");
         PrintOrders(ordersOfToday_2);
       }
 
