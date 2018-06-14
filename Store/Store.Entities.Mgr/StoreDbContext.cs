@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using Store.Entities.Mgr.Mapping;
 using Store.Entities.Mgr.Migrations;
 
 namespace Store.Entities.Mgr
@@ -9,10 +10,12 @@ namespace Store.Entities.Mgr
     {
     }
 
-    /*protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
-      Database.SetInitializer(new MigrateDatabaseToLatestVersion<StoreDbContext, Configuration>());
-    }*/
+      modelBuilder.Configurations.Add(new OrderConfiguration());
+
+      //Database.SetInitializer(new MigrateDatabaseToLatestVersion<StoreDbContext, Configuration>());
+    }
 
     public DbSet<Customer> Customers { get; set; }
 

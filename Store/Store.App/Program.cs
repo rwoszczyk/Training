@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Store.QuickStart;
 
 namespace Store.App
@@ -17,10 +18,14 @@ namespace Store.App
         {
           Console.WriteLine(@"Id: {0}, submit date: {1}", order.Id, order.SubmitDate);
         }
-        
+
+
+        var customer = db.Customers.FirstOrDefault();
+
         var entity = new Order()
         {
-          SubmitDate = DateTime.Now
+          SubmitDate = DateTime.Now,
+          Customer = customer
         };
 
         db.Orders.Add(entity);

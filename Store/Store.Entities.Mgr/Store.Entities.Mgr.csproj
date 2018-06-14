@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
+    <Compile Include="Mapping\OrderConfiguration.cs" />
     <Compile Include="Migrations\201806131317545_Initial.cs" />
     <Compile Include="Migrations\201806131317545_Initial.Designer.cs">
       <DependentUpon>201806131317545_Initial.cs</DependentUpon>

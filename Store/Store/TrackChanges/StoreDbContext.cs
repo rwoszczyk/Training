@@ -24,11 +24,8 @@ namespace Store.TrackChanges
         .Where(p => p.State == EntityState.Modified)
         .ToList();
 
-      //var now = DateTime.UtcNow;
-
       foreach (DbEntityEntry entityEntry in modifiedEntities)
       {
-        //var entityName = change.Entity.GetType().Name;
         var primaryKey = GetPrimaryKeyValue(entityEntry);
 
         foreach (var prop in entityEntry.OriginalValues.PropertyNames)

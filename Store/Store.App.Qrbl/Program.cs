@@ -12,19 +12,20 @@ namespace Store.App.Qrbl
       using (var db = new StoreDbContext())
       {
         Console.WriteLine("Orders");
-
+        
+        var dateTimeToday = DateTime.Today;
 
         var ordersOfToday = db
           .Orders
           .ToList()
-          .Where(x => x.SubmitDate == new DateTime(2018, 06, 15));
+          .Where(x => x.SubmitDate == dateTimeToday);
 
         PrintOrders(ordersOfToday);
 
 
         var ordersOfToday_2 = db
           .Orders
-          .Where(x => x.SubmitDate == new DateTime(2018, 06, 15))
+          .Where(x => x.SubmitDate == dateTimeToday)
           .ToList();
 
         PrintOrders(ordersOfToday_2);
